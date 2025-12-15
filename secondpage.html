@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Types</title>
+    <h1>Available Arts</h1>
+    <style>
+      h1 {
+        position: absolute;
+        font-size: 50px;
+        font-weight: bold;
+        top: 0;
+        left: 450px;
+        color: rgb(20, 90, 194);
+        padding: 20px;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        animation: fadeln 2s ease-in-out;
+      }
+
+      body {
+        margin: 0px;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: lightblue;
+      }
+      .button-container {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin: 150px auto;
+      }
+
+      .img-btn {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        padding: 0;
+        border: none;
+        border-radius: 10px;
+        overflow: hidden;
+        cursor: pointer;
+        box-shadow: 5px -5px 10px rgba(10, 0, 0, 0.3);
+        transition: transform 0.2s;
+      }
+      .img-btn img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .img-btn:active {
+        transform: scale(0.95);
+        box-shadow: 2px -2px 6px rgba(0, 0, 0, 0.2);
+      }
+
+      .img-btn span {
+        font-style: inherit;
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 6px, 10px;
+        border-radius: 8px;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        max-width: 90%;
+        white-space: normal;
+        word-break: break-word;
+        text-overflow: ellipsis;
+      }
+      @keyframes fadeln {
+        0% {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        1000% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .fancy-heading {
+        background-color: linear-gradient(to right, #ff6a00, #ee0979);
+        -webkit-background-clip: transparent;
+        -webkit-text-fill-color: transparent;
+        font-family: "pacifico", cursive;
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translate(-50%);
+        animation: fadeln 2s ease-out;
+      }
+      .img-btn:hover span {
+        opacity: 1;
+      }
+      .order-btn:hover {
+        background-color: #2a63bf;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+      }
+      .button-container {
+        position: absolute;
+        bottom: 30px;
+        width: 100%;
+        text-align: center;
+      }
+      .order-btn {
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 15px 30px;
+        font-size: 18px;
+        background-color: cornflowerblue;
+        color: aliceblue;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+        transition: all 0.2s ease;
+      }
+      .order-btn:active {
+        transform: translate(-50%) scale(0.97);
+        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4);
+        background-color: #1f4fb2;
+      }
+      .nav-arrows {
+        position: absolute;
+        top: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 30px;
+      }
+
+      .arrow {
+        font-size: 28px;
+        text-decoration: none;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.3);
+        padding: 10px 15px;
+        border-radius: 50%;
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+      }
+
+      .arrow:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Arrows -->
+    <!-- Navigation Arrows -->
+    <div class="nav-arrows">
+      <a href="front.html" class="arrow left-arrow">&#8592;</a>
+      <span class="arrow right-arrow">&#8594;</span>
+    </div>
+
+    <div class="button-container">
+      <button
+        class="img-btn"
+        onclick="window.location.href='form filling1.html'"
+      >
+        <img src="Image\pencil art.jpg" alt="image1" />
+        <span style="font-size: 30px">Pencil Art</span>
+      </button>
+      <button
+        class="img-btn"
+        onclick="window.location.href='PencilFrame2.html'"
+      >
+        <img src="Image\pencil with frame.jpg" alt="image2" />
+        <span style="font-size: 30px">Pencil with Frame</span>
+      </button>
+      <button class="img-btn" onclick="window.location.href='ColorForm3.html'">
+        <img src="Image\color art.jpg" alt="image3" />
+        <span style="font-size: 30px">Color Pencil Art</span>
+      </button>
+      <button class="img-btn" onclick="window.location.href='ColorFrame4.html'">
+        <img src="Image\colour pencil with frame.jpg" alt="image4" />
+        <span style="font-size: 30px">Colour Pencil with Frame</span>
+      </button>
+      <button class="img-btn" onclick="window.location.href='EditFrame5.html'">
+        <img src="Image\editing with fame.jpg" alt="image5" />
+        <span style="font-size: 29px">Editing Frame Art</span>
+      </button>
+    </div>
+
+    <div class="order-btn-container">
+      <button class="order-btn">PLACE YOUR ORDER</button>
+    </div>
+  </body>
+</html>
